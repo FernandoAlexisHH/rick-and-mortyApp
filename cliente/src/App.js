@@ -18,11 +18,7 @@ function App() {
 
    useEffect(()=>{
       !access && navigate("/")
-   },[access])
-
-   const username = "fer_guitarrista@hotmail.com";
-   const password = "123abc";
-   
+   },[access, navigate])  
 
    function onSearch(id) {
       if(characters.find((char) => char.id === id)){
@@ -41,13 +37,14 @@ function App() {
       setCharacters(characters.filter((char) => Number(char.id) !== Number(id)))
    };
 
-   const login = (userData) =>{
-      if(userData.email === username && userData.password === password){
-         setAccess(true);
-         navigate("/home");
-      }else{
-         alert("Credenciales Incorrectas")
-      }
+   function login(userData) {
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+         const { access } = data;
+         setAccess(data);
+         access && navigate('/home');
+      });
    }
 
    const logout = () => {

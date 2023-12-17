@@ -17,7 +17,7 @@ export default function Card({name, status, species, gender,origin,image, onClos
             setisFav(true);
          }
       });
-   }, [myFavorites]);
+   }, [myFavorites, id]);
 
    const handleFavorite =() => {
       if(isFav === true){
