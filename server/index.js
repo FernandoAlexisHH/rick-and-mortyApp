@@ -1,4 +1,4 @@
-import server from "./app";
+const server = require("./app");
 
 const PORT = 3001;
 
