@@ -1,4 +1,4 @@
-const {DataTypes, ENUM} = require('sequelize')
+const {DataTypes} = require('sequelize')
 
 module.exports = (sequelize) => {
     sequelize.define('Favorite',{
@@ -12,7 +12,7 @@ module.exports = (sequelize) => {
             allowNull:false
         },
         status: {
-            type:ENUM('Alive','Dead','Unknown'),
+            type:DataTypes.ENUM('Alive','Dead','Unknown'),
             allowNull:false
         },
         species:{

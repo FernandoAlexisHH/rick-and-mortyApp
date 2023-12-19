@@ -10,7 +10,7 @@ const FavoriteModel = require('./models/Favorite.js')
 
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
 const sequelize = new Sequelize(
-   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/henrysequelize`,
+   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/rickandmorty`,
    { logging: false, native: false }
 );
 
@@ -24,10 +24,15 @@ const sequelize = new Sequelize(
 
 // Ejercicio 06
 // ¡Relaciona tus modelos aquí abajo!
-// const { User, Favorite } = sequelize.models;
+const { User, Favorite } = sequelize.models;
+
+User.belongsToMany(Favorite,{through:"UserFavorite"})
+Favorite.belongsToMany(User,{through:"UserFavorite"})
+
+
 
 module.exports = {
-   // User,
-   // Favorite,
+    User,
+   Favorite,
    conn: sequelize,
 };
