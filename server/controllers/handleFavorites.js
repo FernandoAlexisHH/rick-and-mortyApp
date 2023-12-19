@@ -2,9 +2,8 @@ let myFavorites = [];
 
 function postFav(req, res){
     const {name,status,id,gender,image} = req.body
-    myFavorites.push({name,status,id,gender,image})
     console.log(name,status,id,gender,image);
-
+    myFavorites.push({name,status,id,gender,image})
     return res.status(200).json(myFavorites)
 }
 
