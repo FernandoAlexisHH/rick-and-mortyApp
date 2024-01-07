@@ -9,8 +9,6 @@ export default function Favorites() {
     const dispatch = useDispatch();
     const [aux,setAux] = useState(false);
 
-    console.log(myFavorites,allCharacters);
-
     const handleOrder = (e) => {
         dispatch(orderCards(e.target.value))
         setAux(true)
@@ -34,7 +32,7 @@ export default function Favorites() {
             <option value="Genderless">Genderless</option>
             <option value="unknown">Unknown</option>
         </select>
-        {myFavorites.map(({name,status,species,gender,origin,image,id}) => {
+        {myFavorites.map(({name,status,species,gender,image,id}) => {
             return(
                 <Card   key={id} 
                     id={id}
@@ -42,7 +40,6 @@ export default function Favorites() {
                       status={status}
                       species={species}
                       gender={gender}
-                      origin={origin}
                       image={image}
                 />
             )

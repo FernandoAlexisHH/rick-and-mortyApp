@@ -26,8 +26,9 @@ const sequelize = new Sequelize(
 // ¡Relaciona tus modelos aquí abajo!
 const { User, Favorite } = sequelize.models;
 
-User.belongsToMany(Favorite,{through:"UserFavorite"})
-Favorite.belongsToMany(User,{through:"UserFavorite"})
+User.belongsToMany(Favorite,{through: 'UserFavorites'})
+Favorite.belongsToMany(User,{through: 'UserFavorites'})
+
 
 
 

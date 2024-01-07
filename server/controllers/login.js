@@ -3,6 +3,7 @@ const {User} = require('../db/index');
 async function login (req, res) {
     try {
         const {email, password} = req.body;
+        console.log(email,password);
 
         if(!email || !password){
             return res.status(400).send("Faltan Datos")

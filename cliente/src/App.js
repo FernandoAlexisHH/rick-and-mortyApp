@@ -39,9 +39,10 @@ function App() {
 
    function login(userData) {
       const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+      axios.post('http://localhost:3001/rickandmorty/login/user',{email,password})
+      .then(({ data }) => {
          const { access } = data;
+         console.log(access);
          setAccess(data);
          access && navigate('/home');
       });

@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 
-export default function Card({name, status, species, gender,origin,image, onClose,id}) {
+export default function Card({name, status, species, gender,image, onClose,id}) {
    const [isFav,setisFav] = useState(false);
    const dispatch = useDispatch();
    const myFavorites = useSelector((state) => state.myFavorites)
@@ -25,7 +25,7 @@ export default function Card({name, status, species, gender,origin,image, onClos
          dispatch(removeFav(id))
       }else if(isFav === false){
          setisFav(true)
-         dispatch(addFav({name,status,species,gender,origin,image,id}))
+         dispatch(addFav({name,status,species,gender,image,id}))
       }
    };
 
@@ -45,7 +45,6 @@ export default function Card({name, status, species, gender,origin,image, onClos
          <h2>{status}</h2>
          <h2>{species}</h2>
          <h2>{gender}</h2>
-         <h2>{origin}</h2>
       </div>
 
    );

@@ -8,7 +8,7 @@ const deleteFav = require('../controllers/deleteFav')
 const postUser = require('../controllers/postUser')
 
 router.get('/character/:id', getCharById);
-router.get('/login',login)
+router.post('/login/user',login)
 router.post('/login',postUser)
 router.post('/fav', postFav)
 router.delete('/fav/:id',deleteFav)
