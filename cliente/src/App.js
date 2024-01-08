@@ -55,9 +55,8 @@ function App() {
    }
 
    return (
-      <div className='App' style={{padding:"25px"}}>
-         
-         {pathname !== '/' ? <div className={styles.nav}><Nav onSearch={onSearch} logout={logout}/></div>:''}
+      <div className='App'>
+          {pathname !== '/' ? <div className={styles.nav}><Nav onSearch={onSearch} logout={logout}/></div>:''}
          <Routes>
             <Route path='/' element={<Form login={login}/>}/>
             <Route path='/home' element={ <Cards characters={characters} onClose={onClose}/>}/>

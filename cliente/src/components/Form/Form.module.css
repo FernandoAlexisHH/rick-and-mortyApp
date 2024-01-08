@@ -1,0 +1,29 @@
+.form{
+    background:#F0F8FF ;
+    padding: 8px;
+    border-radius: 3px;
+    max-width:100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    justify-content: center;
+    align-items:center;
+}
+.errors{
+    color: red;
+    font-weight: 600;
+}
+.button{
+    margin: 0;
+    padding: 7px 15px 7px 15px;
+    font-size: medium;
+    background: yellow;
+    border:0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.button:hover{
+    background: purple;
+    color: #F0F8FF;
+    transition:all 0.3s ease-in-out;
+}
