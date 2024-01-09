@@ -1,5 +1,10 @@
 export default function About(){
     return(
-        <h1>Este es el Componente About</h1>
+    <div>
+        <h1>Fernando Hernández</h1>
+        <p>Full Stack Developer</p>
+        <p>This is my Rick and Morty proyect made with ReactJS, Redux, CSS modules, Express, Sequelize 🧑🏻‍💻</p>
+
+    </div>
     )
 };

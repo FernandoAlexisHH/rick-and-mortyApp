@@ -10,7 +10,6 @@
 }
 .closeButton{
     position: absolute;
-    
     width:25px;
     border: 0;
     background: rgb(234, 0, 0);
@@ -22,12 +21,12 @@
     height: 25px;
 }
 .likeButton{
-    align-self: center;
+    align-self: flex-end;
     width:40px;
     border: 0;
-    background:purple;
+    background:yellow;
     color: #fff;
-    font-size: 25px;
+    font-size: 20px;
     font-weight:200; 
     cursor: pointer;   
     border-radius: 2px;

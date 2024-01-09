@@ -34,14 +34,15 @@ export default function Form({login}){
     
     return(
         <form onSubmit={submitHandler} className={styles.form}>
-            <img src=".../public/rickandmorty.png" alt="RickandMorty-img" />
             <label htmlFor="email" className={styles.label}>Email</label>
             <input type="text" name="email" value={userData.email} className={styles.input} onChange={handleChange}/>
             <p className={styles.errors}>{errors.email}</p>
             <label htmlFor="password" className={styles.label}>Password</label>
             <input type="password" name="password" value={userData.password} className={styles.input} onChange={handleChange}/>
             <p className={styles.errors}>{errors.password}</p>
+            <p>Create an account or log into </p>
             <button className={styles.button}>Entrar</button>
+            <button className={styles.register}>Register</button>
         </form>
     )
 };
