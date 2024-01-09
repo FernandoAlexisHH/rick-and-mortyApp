@@ -1,11 +1,20 @@
 .logout{
     border: 0;
     padding:8px;
-    background: red;
+    background: rgb(234, 0, 0);
     color: #fff;
     font-size: 15px;
-    font-weight: 500;    
+    font-weight: 500; 
+    cursor: pointer;   
+    border-radius: 4px;
+}
+.logout:hover{
+    background: rgb(255, 42, 42);
 }
 .link{
     text-decoration: none;
+}
+
+.link:hover{
+    background: rgb(255, 176, 28);
 }

@@ -33,18 +33,18 @@ export default function Card({name, status, species, gender,image, onClose,id}) 
       <div className={style.container}>
          {
             isFav ? (
-               <button onClick={handleFavorite}>❤️</button>
+               <button onClick={handleFavorite} className={style.likeButton}>❤️</button>
             ) : (
-               <button onClick={handleFavorite}>🤍</button>
+               <button onClick={handleFavorite} className={style.likeButton}>🤍</button>
             )
          }
        <button onClick={() => { dispatch(removeFav(id))
           onClose(id)} } className={style.closeButton}>X</button>
-         <img src={image} alt='Imagen de personaje'/>
-         <Link to={`/detail/${id}`}><h2>{name}</h2></Link>
-         <h2>{status}</h2>
-         <h2>{species}</h2>
-         <h2>{gender}</h2>
+         <img src={image} alt='Imagen de personaje' className={style.img}/>
+         <Link to={`/detail/${id}`} className={style.h2}><h2 className={style.h2}>{name}</h2></Link>
+         <p className={style.p}>{status}</p>
+         <p className={style.p}>{species}</p>
+         <p className={style.p}>{gender}</p>
       </div>
 
    );

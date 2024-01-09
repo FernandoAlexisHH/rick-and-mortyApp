@@ -1,0 +1,52 @@
+.div{
+    background: purple;
+    border-radius: 8px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 600px;
+    max-height: 500px;
+    gap: 8px;
+    margin: auto;
+}
+.h1{
+    font-size: 40px;
+    border-radius: 4px;
+    font-weight: 200;
+    background-color: #8a4dfc;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.p{
+    font-size: 30px;
+    border-radius: 4px;
+    background-color: #8a4dfc;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h1:hover{
+    
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        transform: scale(1.02); 
+}
+.p:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        transform: scale(1.02); 
+}
+.image{
+    grid-column: -2/ -1 ;
+    grid-row: 3 / -4;
+    border-radius: 50%;
+}
+.div :nth-child(4){
+    margin-top: 20px;
+}

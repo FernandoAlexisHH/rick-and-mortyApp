@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState,useEffect } from "react";
 import axios from "axios";
+import styles from "./Detail.module.css";
 
 export default function Detail(){
     const {id} = useParams();
@@ -18,14 +19,15 @@ export default function Detail(){
         return setCharacter({});
      }, [id]);
 
-    return( <> {character.name ?  
-        (<div>
-        <h1>{character.name}</h1>
-        <p>{character.status}</p>
-        <p>{character.species}</p>
-        <p>{character.gender}</p>
-        <p>{character.origin.name}</p>
-        <img src={character.image} alt={character.name} />
+    return( <> 
+      {character.name ?  
+        (<div className={styles.div}>
+        <h1 className={styles.h1}>{character.name}</h1>
+        <p className={styles.p}>Status: {character.status}</p>
+        <p className={styles.p}>Species: {character.species}</p>
+        <p className={styles.p}>Gender: {character.gender}</p>
+        <p className={styles.p}>{character.origin.name}</p>
+        <img src={character.image} className={styles.image} alt={character.name} />
         </div>) : (<h3>Loading... </h3>)
     }</>
     )

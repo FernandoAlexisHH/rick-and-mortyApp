@@ -1,23 +1,57 @@
 .container{
-    background-color: #ff9a3c;
-    width: fit-content;
-    padding: 1em;
-    border-radius: 10px;
-    margin: 10px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    text-shadow: 3px 4px 2px rgba(0,0,0,0.44);
+    border-radius: 8px;
+    background: rgba(76, 175, 80, 0.9);
+    opacity: 90%;
+    width: 100%;
+    height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    padding: 10px; 
 }
 .closeButton{
-    border: 0px;
-    background-color: red;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 10px;
-    color: white;
+    position: absolute;
+    
+    width:25px;
+    border: 0;
+    background: rgb(234, 0, 0);
+    color: #fff;
+    font-size: 15px;
+    font-weight:200; 
+    cursor: pointer;   
+    border-radius: 2px;
+    height: 25px;
 }
-
+.likeButton{
+    align-self: center;
+    width:40px;
+    border: 0;
+    background:purple;
+    color: #fff;
+    font-size: 25px;
+    font-weight:200; 
+    cursor: pointer;   
+    border-radius: 2px;
+    height: 35px;
+}
+.h2{
+    text-decoration: none;
+    margin: 4px;
+    align-self: center;
+    font-weight: 900;
+    font-size: 30px;
+}
+.p{
+    margin: 3px;
+    align-self:center;
+    font-weight: 900;
+    font-size: 20px;
+}
 .closeButton:hover{
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: rgb(255, 74, 74);
+}
+.img{
+    margin: 4px;
+}
+.likeButton:hover{
+    
 }
