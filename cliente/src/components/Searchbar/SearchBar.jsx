@@ -9,11 +9,11 @@ export default function SearchBar({onSearch}) {
    };
 
    return (
-      <div className={styles.bar}>
-         <input type='search' className={styles.searchInput} onChange={(e)=>handleChange(e)}/>
+      <div className={styles.searchbar}>
+         <input type='search' placeholder="Search By ID..." className={styles.searchInput} onChange={(e)=>handleChange(e)}/>
           <button 
           onClick={()=>onSearch(id)} className={styles.searchButton}>
-            Agregar
+            Search
          </button> 
       </div>
    );

@@ -2,12 +2,13 @@
     background:#F0F8FF ;
     padding: 8px;
     border-radius: 3px;
-    max-width:100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     max-width: 600px;
     justify-content: center;
     align-items:center;
+    margin:0 auto; 
 }
 .errors{
     color: red;
@@ -26,4 +27,16 @@
     background: purple;
     color: #F0F8FF;
     transition:all 0.3s ease-in-out;
+}
+.label{
+    font-size: 20px;
+    margin-bottom: 2px;
+    padding: 2px;
+    color: purple;
+    font-weight: 700;
+    font-family: monospace;
+}
+.input{
+    border: medium solid rgb(120, 96, 255);
+    width: 200px;
 }

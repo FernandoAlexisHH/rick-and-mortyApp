@@ -9,9 +9,13 @@ body{
 
 .nav{
    background-color:#ffc93c;
-   padding: 1em;
    display: flex;
    flex-direction: row;
-   justify-content: end;
+   justify-content: flex-end;
+   align-items: center;
+   align-content: space-between;
+   gap: 18px;
+   margin-top: 0;
+   padding: 8px;
    margin-bottom: 1em;
 }
