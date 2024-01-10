@@ -9,6 +9,7 @@ import styles from './App.module.css'
 import axios from 'axios';
 import Form from './components/Form/Form.jsx';
 import Favorites from './components/Favorites/Favorites.jsx';
+import Register from './components/Register/Register.jsx';
 
 function App() {
    const [characters,setCharacters] = useState([]);
@@ -17,6 +18,7 @@ function App() {
    const navigate = useNavigate();
 
    useEffect(()=>{
+      if(pathname === '/register') return
       !access && navigate("/")
    },[access, navigate])  
 
@@ -56,9 +58,10 @@ function App() {
 
    return (
       <div className='App'>
-          {pathname !== '/' ? <div className={styles.nav}><Nav onSearch={onSearch} logout={logout}/></div>:''}
+          {pathname !== '/' && pathname !== '/register' ? <div className={styles.nav}><Nav onSearch={onSearch} logout={logout}/></div>:''}
          <Routes>
             <Route path='/' element={<Form login={login}/>}/>
+            <Route path='/register' element={<Register/>}/>
             <Route path='/home' element={ <Cards characters={characters} onClose={onClose}/>}/>
             <Route path='/about' element={<About />}/>
             <Route path='/favorites' element={<Favorites/>}/>

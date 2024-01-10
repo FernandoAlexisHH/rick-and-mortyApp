@@ -1,6 +1,7 @@
 import { useState } from "react";
 import validation from "./validations.js";
 import styles from './Form.module.css';
+import { Link } from "react-router-dom";
 
 export default function Form({login}){
     const [userData,setUserData] = useState({
@@ -42,7 +43,7 @@ export default function Form({login}){
             <p className={styles.errors}>{errors.password}</p>
             <p>Create an account or log into </p>
             <button className={styles.button}>Entrar</button>
-            <button className={styles.register}>Register</button>
+            <Link to="/register" className={styles.register}>Register</Link>
         </form>
     )
 };
