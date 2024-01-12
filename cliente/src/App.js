@@ -23,16 +23,17 @@ function App() {
    },[access, navigate])  
 
    function onSearch(id) {
-      if(characters.find((char) => char.id === id)){
-       return alert("Personaje repetido"); 
-      }
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+      if(characters.find((personaje) => personaje.id === id)) return window.alert("Personaje repetido"); 
+      else{
+         axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
-         } else {
+         }else {
             window.alert('¡No hay personajes con este ID!');
          }
-      });
+   }
+   )
+}
    }
 
    const onClose = (id) => {
@@ -44,7 +45,6 @@ function App() {
       axios.post('http://localhost:3001/rickandmorty/login/user',{email,password})
       .then(({ data }) => {
          const { access } = data;
-         console.log(access);
          setAccess(data);
          access && navigate('/home');
       });
@@ -61,7 +61,7 @@ function App() {
           {pathname !== '/' && pathname !== '/register' ? <div className={styles.nav}><Nav onSearch={onSearch} logout={logout}/></div>:''}
          <Routes>
             <Route path='/' element={<Form login={login}/>}/>
-            <Route path='/register' element={<Register/>}/>
+            <Route path='/register' element={<Register login={login}/>}/>
             <Route path='/home' element={ <Cards characters={characters} onClose={onClose}/>}/>
             <Route path='/about' element={<About />}/>
             <Route path='/favorites' element={<Favorites/>}/>

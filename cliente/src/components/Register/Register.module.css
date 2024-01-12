@@ -1,0 +1,45 @@
+.container{
+    background: rgba(255, 255, 255, 0.8);
+    padding: 6px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    justify-content: center;
+    align-items:center;
+    height: 300px;
+    gap: 8px;
+    margin:15px auto; 
+}
+.h1{
+    color: rgb(46, 203, 7);
+}
+
+.register{
+    margin-top: 10px;
+    padding: 7px 15px 7px 15px;
+    font-size: medium;
+    background: rgb(46, 203, 7);
+    border:0;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+.register:hover{
+    background-color: rgb(44, 218, 68);
+    transition:all 0.3s ease-in-out;
+}
+.label{
+    font-size: 20px;
+    margin-bottom: 2px;
+    padding: 2px;
+    color: rgb(46, 203, 7);
+    font-weight: 700;
+    font-family: monospace;
+}
+.input{
+    border: medium solid rgb(46, 203, 7);
+    width: 200px;
+}
